@@ -7,7 +7,7 @@ export const sendMessage = async (text, customerId) => {
   // Create a new session
   const sessionClient = new dialogflow.SessionsClient()
   const sessionPath = sessionClient.sessionPath(
-    'silken-gadget-241811',
+    process.env.GCP_PROJECT,
     customerId
   )
 
